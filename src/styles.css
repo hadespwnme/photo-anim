@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    overflow: hidden; /* Prevent scrollbars */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scramble-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 300px;
+}
+
+.test {
+    font-size: 3em;
+    font-family: "Anonymous Pro";
+    color: cyan;
+    text-shadow: 0 0 10px white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+p{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    color: aqua;
+    text-shadow: 0 0 10px;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    font-family: "Ubuntu", sans-serif;
+    background-color: #358dff;
+    color: white;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: #d40000;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+#lyrics-container {
+    padding-top: 30px;
+    font-size: 2em;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 20px;
+    color: cyan;
+    text-shadow: 0 0 10px white;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.sakura {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.sakura span {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 0.8vw;
+    height: 0.4vw;
+    border-radius: 5% 80% 10% 80%;
+    background-color: #ffb6c1;
+    animation: sakura-anim 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+/* Adjust the left position and animation duration for each flower */
+.sakura span:nth-child(1) { left: 5%; animation-duration: 15s; }
+.sakura span:nth-child(2) { left: 10%; animation-duration: 10s; }
+.sakura span:nth-child(3) { left: 15%; animation-duration: 12s; }
+.sakura span:nth-child(4) { left: 20%; animation-duration: 18s; }
+.sakura span:nth-child(5) { left: 25%; animation-duration: 14s; }
+.sakura span:nth-child(6) { left: 30%; animation-duration: 16s; }
+.sakura span:nth-child(7) { left: 35%; animation-duration: 20s; }
+.sakura span:nth-child(8) { left: 40%; animation-duration: 13s; }
+.sakura span:nth-child(9) { left: 45%; animation-duration: 19s; }
+.sakura span:nth-child(10) { left: 50%; animation-duration: 15s; }
+.sakura span:nth-child(11) { left: 55%; animation-duration: 17s; }
+.sakura span:nth-child(12) { left: 60%; animation-duration: 14s; }
+.sakura span:nth-child(13) { left: 65%; animation-duration: 16s; }
+.sakura span:nth-child(14) { left: 70%; animation-duration: 18s; }
+.sakura span:nth-child(15) { left: 75%; animation-duration: 13s; }
+.sakura span:nth-child(16) { left: 80%; animation-duration: 19s; }
+.sakura span:nth-child(17) { left: 85%; animation-duration: 15s; }
+.sakura span:nth-child(18) { left: 90%; animation-duration: 17s; }
+.sakura span:nth-child(19) { left: 95%; animation-duration: 14s; }
+.sakura span:nth-child(20) { left: 100%; animation-duration: 20s; }
+
+/* Vary the size of the petals */
+.sakura span:nth-child(3n+1) {
+    width: 1vw;
+    height: 0.5vw;
+}
+
+.sakura span:nth-child(3n+2) {
+    width: 0.8vw;
+    height: 0.4vw;
+}
+
+.sakura span:nth-child(3n+3) {
+    width: 0.6vw;
+    height: 0.3vw;
+}
+
+/* Animation for sakura petals */
+@keyframes sakura-anim {
+    0% {
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(15vw) rotate(360deg);
+    }
+}
